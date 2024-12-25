@@ -1,0 +1,154 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and background */
+body {
+    background-color: white; /* Setting the background color to white */
+}
+
+/* Navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* تقليل المسافة قليلاً ليكون مناسبًا */
+    background-color: #ad8a6d;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+nav .logo img {
+    width: 120px; /* حجم الشعار أكثر تناسقًا */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* تقليل المسافة بين العناصر */
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px; /* حجم خط مناسب لجميع الأجهزة */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white; /* Change to white when hovered */
+}
+
+/* Styling for mobile menu toggle button (hamburger) */
+.hamburger {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide menu initially on small screens */
+        flex-direction: column;
+        background-color: #ad8a6d;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+
+    nav .logo img {
+        width: 100px; /* حجم أصغر للشعار على الشاشات الصغيرة */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* حجم خط أكبر قليلاً لجعله أكثر وضوحًا على الجوال */
+    }
+
+    nav {
+        padding: 10px 20px; /* تقليل المسافة في الشاشات الصغيرة */
+    }
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-wrap: wrap; /* يجعل العناصر تتكدس على الشاشات الصغيرة */
+    justify-content: space-between;
+    align-items: center;
+    height: auto; /* إزالة الطول الثابت */
+    padding: 30px; /* تقليل الحواف */
+    background-color: #f1f1f1;
+}
+
+.detail {
+    flex: 1;
+    padding-left: 20px; /* تقليل المسافة الجانبية */
+}
+
+.detail h1 {
+    font-size: 24px; /* حجم خط أصغر قليلاً */
+    color: black;
+    margin-bottom: 15px;
+}
+
+.detail p {
+    font-size: 16px; /* حجم خط مناسب للنصوص */
+    color: black;
+}
+
+.image {
+    flex: 1;
+    padding-right: 20px; /* تقليل المسافة الجانبية */
+    display: flex;
+    justify-content: center;
+    margin-left: 50px; /* تعديل القيمة لتكون متناسقة */
+}
+
+.image img {
+    width: 90%; /* تحسين عرض الصورة */
+    height: auto;
+}
+
+/* Button Styling (if needed) */
+.btn {
+    padding: 10px 20px;
+    background-color: #987051;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px; /* حجم خط مناسب */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7c5a3f;
+}
+
+
